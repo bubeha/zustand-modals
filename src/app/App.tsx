@@ -1,17 +1,15 @@
-import {Providers} from "./providers";
-import {Modal} from "../shared/ui/modal";
-import {useState} from "react";
+import {Providers} from "app/providers";
+import {CustomModalInner, ModalKey, useModalStore} from "features/modal";
 
 export function App() {
-    const [open, setOpen] = useState(false)
+    const open = useModalStore((state) => state.open);
 
     return (
         <Providers>
-            <button onClick={() => setOpen(true)}>Button</button>
-
-            <Modal title="Test" open={open} onClose={() => setOpen(false)}>
-                Test Modal
-            </Modal>
+            <div className="flex gap-3">
+                <button onClick={() => open('Custom Modal', CustomModalInner)}>Open Custom Modal</button>
+                <button onClick={() => open(ModalKey.DefaultModal)}>Open Default Modal</button>
+            </div>
         </Providers>
     )
 }

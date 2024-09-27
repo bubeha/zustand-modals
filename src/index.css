@@ -116,3 +116,19 @@ button:focus-visible {
 .read-the-docs {
     color: #888;
 }
+
+.flex {
+    display: flex;
+}
+
+.gap-3 {
+    gap: 15px;
+}
+
+.mt-5 {
+    margin-top: 25px;
+}
+
+.justify-end {
+    justify-content: end;
+}
