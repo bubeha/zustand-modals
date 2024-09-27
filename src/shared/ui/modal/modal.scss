@@ -1,0 +1,33 @@
+.modal {
+
+  &-overlay,
+  &-content {
+    position: fixed;
+  }
+
+  &-content {
+    background: #fff;
+    color: #1a1a1a;
+    padding: 10px 40px 20px 40px;
+    max-width: 480px;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+
+    border-radius: 5px;
+
+    transform: translateY(-50%) translateX(-50%);
+  }
+
+  &-close_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: transparent;
+    color: #1a1a1a;
+  }
+
+  &-title {
+    margin-top: 0;
+  }
+}
